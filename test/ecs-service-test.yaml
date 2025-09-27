@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: CFT Template for creating ECS Fargate
+
+Resources:
+  ECRRepository:
+    Type: AWS::E
+    Properties:
+      ImageTagMutability: MUTABLE
+      RepositoryName: ecr-repo-test
+      Tags:
+      - Key: env
+        Value: test
+
+Outputs:
+  ECRName:
+    Description: ECR Repository Created Successfully !
+    Value: !Ref ECRRepository
+    Export:
+      Name: ecr-repo-test

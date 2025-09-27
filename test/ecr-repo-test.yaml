@@ -12,8 +12,8 @@ Resources:
         Value: test
 
 Outputs:
-  ECRNane:
+  ECRName:
     Description: ECR Repository Created Successfully !
     Value: !Ref ECRRepository
     Export:
-      Name: cr-repo-test
+      Name: ecr-repo-test
