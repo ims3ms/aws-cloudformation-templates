@@ -6,14 +6,14 @@ Resources:
     Type: AWS::ECR::Repository
     Properties:
       ImageTagMutability: MUTABLE
-      RepositoryName: ecr-repo-test
+      RepositoryName: ecr-repo
       Tags:
       - Key: env
-        Value: test
+        Value: stage
 
 Outputs:
   ECRName:
-    Description: ECR Repository Created Successfully !
+    Description: ECR Repository Created
     Value: !Ref ECRRepository
     Export:
-      Name: ecr-repo-test
+      Name: ecr-repo

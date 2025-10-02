@@ -5,7 +5,7 @@ Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: test-s3-bucket
+      BucketName: myapp-s3-bucket
       VersioningConfiguration:
         Status: Suspended
       PublicAccessBlockConfiguration:
@@ -15,11 +15,11 @@ Resources:
         RestrictPublicBuckets: true
       Tags:
       - Key: env
-        Value: test
+        Value: stage
 
 Outputs:
   S3BucketName:
     Description: S3 Bucket Created
     Value: !Ref S3Bucket
     Export:
-      Name: test-s3-bucket
+      Name: myapp-s3-bucket
